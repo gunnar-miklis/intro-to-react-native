@@ -89,9 +89,9 @@ export default function App() {
 	};
 
 	return (
-		<SafeAreaProvider>
+		<SafeAreaProvider style={styles.container}>
 			<SafeAreaView>
-				<GestureHandlerRootView style={styles.container}>
+				<GestureHandlerRootView>
 					<Text style={{ color: '#fff' }}>Hello World! 123</Text>
 					<View style={styles.imageContainer}>
 						<View ref={imageRef} collapsable={false}>
