@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/react-native-sticker-smash/static/js/main.9484bc08.js",
+    "main.js": "/react-native-sticker-smash/static/js/main.c8510076.js",
     "static/js/955.a16eac2b.js": "/react-native-sticker-smash/static/js/955.a16eac2b.js",
     "static/media/background-image.png": "/react-native-sticker-smash/static/media/background-image.979cd8651f1550fd8cf0.png",
     "static/media/MaterialIcons.ttf": "/react-native-sticker-smash/static/media/MaterialIcons.120b4c7bbd155bd0a04d.ttf",
@@ -17,11 +17,11 @@
     "favicon-16.png": "/react-native-sticker-smash/favicon-16.png",
     "manifest.json": "/react-native-sticker-smash/manifest.json",
     "serve.json": "/react-native-sticker-smash/serve.json",
-    "main.9484bc08.js.map": "/react-native-sticker-smash/static/js/main.9484bc08.js.map",
+    "main.c8510076.js.map": "/react-native-sticker-smash/static/js/main.c8510076.js.map",
     "955.a16eac2b.js.map": "/react-native-sticker-smash/static/js/955.a16eac2b.js.map"
   },
   "entrypoints": [
     "static/js/955.a16eac2b.js",
-    "static/js/main.9484bc08.js"
+    "static/js/main.c8510076.js"
   ]
 }
