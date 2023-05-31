@@ -1,3 +1,3 @@
-# playing around with React Native
+# React Native Intro
 
-following https://docs.expo.dev/tutorial/introduction/
+Playing around with **React Native** and **Expo Go** on Android and Web, following: [Expo Docs](https://docs.expo.dev/tutorial/introduction)
