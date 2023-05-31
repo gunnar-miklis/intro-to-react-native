@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { StyleSheet, Text, View, Platform } from 'react-native';
+import { StyleSheet, View, Platform } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
@@ -20,18 +20,23 @@ import EmojiSticker from './components/EmojiSticker';
 
 
 export default function App() {
+	const [selectedImage, setSelectedImage] = useState( null );
+	const imageRef = useRef();
+	const [showAppOptions, setShowAppOptions] = useState( false );
+	const [isModalVisible, setIsModalVisible] = useState( false );
+	const [pickedEmoji, setPickedEmoji] = useState( null );
 	const [status, requestPermission] = MediaLibrary.usePermissions();
+
 	if ( status === null ) {
 		requestPermission();
 	}
 
-	const [selectedImage, setSelectedImage] = useState( null );
-	const imageRef = useRef();
 	const pickImageAsync = async () => {
 		const result = await ImagePicker.launchImageLibraryAsync( {
 			allowsEditing: true,
-			quality: 0.5,
+			quality: 1,
 		} );
+
 		if ( !result.canceled ) {
 			setSelectedImage( result.assets[0].uri );
 			setShowAppOptions( true );
@@ -46,6 +51,7 @@ export default function App() {
 					height: 440,
 					quality: 1,
 				} );
+
 				await MediaLibrary.saveToLibraryAsync( localUri );
 				if ( localUri ) {
 					alert( 'Saved!' );
@@ -60,6 +66,7 @@ export default function App() {
 					width: 320,
 					height: 440,
 				} );
+
 				const link = document.createElement( 'a' );
 				link.download = 'sticker-smash.jpeg';
 				link.href = dataUrl;
@@ -70,20 +77,15 @@ export default function App() {
 		}
 	};
 
-	const [showAppOptions, setShowAppOptions] = useState( false );
 	const onReset = () => {
 		setShowAppOptions( false );
 		setPickedEmoji( false );
 		setIsModalVisible( false );
 		setSelectedImage( null );
 	};
-
-	const [pickedEmoji, setPickedEmoji] = useState( null );
 	const onAddSticker = () => {
 		setIsModalVisible( true );
 	};
-
-	const [isModalVisible, setIsModalVisible] = useState( false );
 	const onModalClose = () => {
 		setIsModalVisible( false );
 	};
@@ -92,30 +94,46 @@ export default function App() {
 		<SafeAreaProvider style={styles.container}>
 			<SafeAreaView style={styles.container}>
 				<GestureHandlerRootView style={styles.container}>
+
 					<View style={styles.imageContainer}>
 						<View ref={imageRef} collapsable={false}>
-							<ImageViewer placeholderImageSource={PlaceholderImage} selectedImage={selectedImage} />
-							{pickedEmoji !== null ? <EmojiSticker imageSize={40} stickerSource={pickedEmoji} /> : null }
+							<ImageViewer
+								placeholderImageSource={PlaceholderImage}
+								selectedImage={selectedImage}
+							/>
+							{ pickedEmoji !== null ?
+								<EmojiSticker
+									imageSize={40}
+									stickerSource={pickedEmoji}
+								/> : null
+							}
 						</View>
 					</View>
-					{ showAppOptions ? (
-						<View style={styles.optionsContainer}>
-							<View style={styles.optionsRow}>
-								<IconButton icon="refresh" label="Reset" onPress={onReset} />
-								<CircleButton onPress={onAddSticker} />
-								<IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
+
+					{ showAppOptions ?
+						(
+							<View style={styles.optionsContainer}>
+								<View style={styles.optionsRow}>
+									<IconButton icon="refresh" label="Reset" onPress={onReset} />
+									<CircleButton onPress={onAddSticker} />
+									<IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
+								</View>
 							</View>
-						</View>
-					) : (
-						<View style={styles.footerContainer}>
-							<Button label={'Choose photo'} theme="primary" onPress={pickImageAsync}/>
-							<Button label={'Use this photo'} onPress={()=>setShowAppOptions( true )} />
-						</View>
-					)}
+						) :
+						(
+							<View style={styles.footerContainer}>
+								<Button label="Choose a photo" theme="primary" onPress={pickImageAsync} />
+								<Button label="Use this photo" onPress={() => setShowAppOptions( true )} />
+							</View>
+						)
+					}
+
 					<EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
 						<EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
 					</EmojiPicker>
+
 					<StatusBar style="light" />
+
 				</GestureHandlerRootView>
 			</SafeAreaView>
 		</SafeAreaProvider>

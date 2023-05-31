@@ -14,13 +14,13 @@ export default function EmojiList( { onSelect, onCloseModal } ) {
 	return (
 		<FlatList
 			horizontal
-			showsHorizontalScrollIndicator={Platform.OS === 'web' ? true : false }
+			showsHorizontalScrollIndicator={Platform.OS === 'web' ? true : false}
 			data={emoji}
 			contentContainerStyle={styles.listContainer}
-			renderItem={ ( { item, index } ) => {
+			renderItem={( { item, index } ) => {
 				return (
 					<Pressable
-						onPress={()=>{
+						onPress={() => {
 							onSelect( item );
 							onCloseModal();
 						}}>
