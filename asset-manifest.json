@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "/react-native-sticker-smash/static/js/main.82345a88.js",
-    "static/js/955.a16eac2b.js": "/react-native-sticker-smash/static/js/955.a16eac2b.js",
-    "static/media/background-image.png": "/react-native-sticker-smash/static/media/background-image.979cd8651f1550fd8cf0.png",
-    "static/media/MaterialIcons.ttf": "/react-native-sticker-smash/static/media/MaterialIcons.120b4c7bbd155bd0a04d.ttf",
-    "static/media/FontAwesome.ttf": "/react-native-sticker-smash/static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
-    "static/media/emoji5.png": "/react-native-sticker-smash/static/media/emoji5.3ca0d7e3697bb4f720c7.png",
-    "static/media/emoji6.png": "/react-native-sticker-smash/static/media/emoji6.e2cad3fa2dc59d64cc4e.png",
-    "static/media/emoji2.png": "/react-native-sticker-smash/static/media/emoji2.5685d9a22d6660f57a1b.png",
-    "static/media/emoji3.png": "/react-native-sticker-smash/static/media/emoji3.d02b4d8049c9306be207.png",
-    "static/media/emoji4.png": "/react-native-sticker-smash/static/media/emoji4.9f86a388736b1b9772eb.png",
-    "static/media/emoji1.png": "/react-native-sticker-smash/static/media/emoji1.7df01aeee9beb5aa5910.png",
-    "favicon.ico": "/react-native-sticker-smash/favicon.ico",
-    "index.html": "/react-native-sticker-smash/index.html",
-    "favicon-32.png": "/react-native-sticker-smash/favicon-32.png",
-    "favicon-16.png": "/react-native-sticker-smash/favicon-16.png",
-    "manifest.json": "/react-native-sticker-smash/manifest.json",
-    "serve.json": "/react-native-sticker-smash/serve.json",
-    "main.82345a88.js.map": "/react-native-sticker-smash/static/js/main.82345a88.js.map",
-    "955.a16eac2b.js.map": "/react-native-sticker-smash/static/js/955.a16eac2b.js.map"
+    "main.js": "/intro-to-react-native/static/js/main.304e7111.js",
+    "static/js/955.2788a0c3.js": "/intro-to-react-native/static/js/955.2788a0c3.js",
+    "static/media/background-image.png": "/intro-to-react-native/static/media/background-image.979cd8651f1550fd8cf0.png",
+    "static/media/MaterialIcons.ttf": "/intro-to-react-native/static/media/MaterialIcons.120b4c7bbd155bd0a04d.ttf",
+    "static/media/FontAwesome.ttf": "/intro-to-react-native/static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
+    "static/media/emoji5.png": "/intro-to-react-native/static/media/emoji5.3ca0d7e3697bb4f720c7.png",
+    "static/media/emoji6.png": "/intro-to-react-native/static/media/emoji6.e2cad3fa2dc59d64cc4e.png",
+    "static/media/emoji2.png": "/intro-to-react-native/static/media/emoji2.5685d9a22d6660f57a1b.png",
+    "static/media/emoji3.png": "/intro-to-react-native/static/media/emoji3.d02b4d8049c9306be207.png",
+    "static/media/emoji4.png": "/intro-to-react-native/static/media/emoji4.9f86a388736b1b9772eb.png",
+    "static/media/emoji1.png": "/intro-to-react-native/static/media/emoji1.7df01aeee9beb5aa5910.png",
+    "favicon.ico": "/intro-to-react-native/favicon.ico",
+    "index.html": "/intro-to-react-native/index.html",
+    "favicon-32.png": "/intro-to-react-native/favicon-32.png",
+    "favicon-16.png": "/intro-to-react-native/favicon-16.png",
+    "manifest.json": "/intro-to-react-native/manifest.json",
+    "serve.json": "/intro-to-react-native/serve.json",
+    "main.304e7111.js.map": "/intro-to-react-native/static/js/main.304e7111.js.map",
+    "955.2788a0c3.js.map": "/intro-to-react-native/static/js/955.2788a0c3.js.map"
   },
   "entrypoints": [
-    "static/js/955.a16eac2b.js",
-    "static/js/main.82345a88.js"
+    "static/js/955.2788a0c3.js",
+    "static/js/main.304e7111.js"
   ]
 }
